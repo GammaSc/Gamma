@@ -1,626 +1,142 @@
-<script>
-    var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-    if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
-
-    function mischandler() {
-        return false;
-    }
-
-
-    document.onkeydown = function(e) {
-        if (event.keyCode == 123) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
-            return false;
-        }
-    }
-</script>
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!DOCTYPE html>
-    <html lang="pt-br">
     <meta charset="UTF-8">
-    <meta property="og:title" content="Gamma Scanner™">
-    <meta property="og:description" content="Gamma, A Scanner Provider That Offers High Quality Scaner Tools.">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Gamma™</title>
-
-    <link href="assets/css/imports.css" rel="stylesheet">
-
-    <link href="assets/css/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/font.css" />
-
-    <script src="assets/js/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="assets/js/aos@2.3.1/aos.js"></script>
-    <script src="cdn.sellix.io/static/js/embed.js"></script>
-    <link href="cdn.sellix.io/static/css/embed.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terms of Service - Gamma Scanner</title>
     <style>
         body {
-            background-image: url('assets/images/background.jpg');
-            background-size: 1920px 1080px;
-            /* Adjust the background size as needed */
-            background-repeat: no-repeat;
-            /* Prevent the background from repeating */
-        }
-    </style>
-
-
-
-
-</head>
-<div class="head" style="width: 100%; height: 20px; position: absolute; z-index: -1"></div>
-
-<header id="navbar" class="active">
-
-    <div class="header">
-        <div class="brand">
-            <h1>Gamma Scanner&trade;</h1>
-        </div>
-        <nav class="nav">
-            <a href="index.html" class="_blank">Home</a>
-	        <a href="ToS.html" class="_blank">ToS</a>
-            <a href="https://discord.gg/894xQpr47U" target="_blank" rel="noopener noreferrer">Discord</a>
-
-        </nav>
-    </div>
-
-
-
-
-</header>
-
-
-
-
-
-<section id="landing">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="2200">
-                <div class="left">
-                    <div class="box-welcome">
-                        <span>Gamma Scanner</span>
-                    </div>
-                    <div class="content">
-                        <h1 class="mb-3">Welcome to Project Gamma<span class="red">!</span></h1>
-                        <div class="paragraph">
-                            <p class="mb-5"></p>
-                            <p class="mb-5"> - A Tool designed to track Cheaters.</p>
-                        </div>
-                        <!-- Checkbox und Button in einer Zeile -->
-                        <div class="checkbox-container">
-                            <a id="download-btn" class="button" href="#" onclick="return false" disabled>Download</a>
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="tos-checkbox">
-                                <span class="checkmark"></span>
-                                I agree to the ToS
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
-                <img class="tilted" style="top: 30px; box-shadow: 0px 0px 50px #6f00ed; border-radius: 50px;" src="assets/images/paid2.png" alt="Tilted Image">
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    .checkbox-container {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .checkbox-label {
-        display: flex;
-        align-items: center;
-        margin-left: 10px; /* Abstand zwischen Button und Checkbox */
-        font-size: 16px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .checkbox-label input {
-        display: none; /* Versteckt das ursprüngliche Checkbox-Element */
-    }
-
-    .checkmark {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #fff;
-        border-radius: 5px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .checkbox-label input:checked + .checkmark {
-        background-color: #6f00ed; /* Lila Hintergrund, wenn die Checkbox aktiviert ist */
-        border-color: #6f00ed; /* Lila Rand */
-    }
-
-    .checkbox-label .checkmark:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        background-color: white;
-        border-radius: 2px;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        transform: scale(0);
-        transition: transform 0.2s ease;
-    }
-
-    .checkbox-label input:checked + .checkmark:before {
-        transform: scale(1); /* Zeigt den inneren Haken, wenn angekreuzt */
-    }
-
-    .button {
-        padding: 12px 24px;
-        background-color: #6f00ed;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-        font-size: 16px;
-        margin-right: 15px;
-    }
-
-    .button:disabled {
-        background-color: grey;
-        cursor: not-allowed;
-    }
-
-    .button:hover {
-        background-color: #5200b8; /* Dunkleres Lila beim Hover */
-    }
-
-    .checkbox-container a {
-        display: inline-block;
-    }
-</style>
-
-<script>
-    // Hole die Checkbox und den Download-Button
-    const tosCheckbox = document.getElementById('tos-checkbox');
-    const downloadButton = document.getElementById('download-btn');
-
-    // Funktion, die den Button aktiviert/deaktiviert und den href setzt
-    function toggleDownloadButton() {
-        if (tosCheckbox.checked) {
-            downloadButton.disabled = false; // Aktiviert den Button
-            downloadButton.href = 'assets/executeable/Gamma.exe'; // Setzt den Download-Link
-            downloadButton.removeAttribute('onclick'); // Entfernt den "onclick"-Blocker
-        } else {
-            downloadButton.disabled = true; // Deaktiviert den Button
-            downloadButton.href = '#'; // Entfernt den Link, wenn deaktiviert
-            downloadButton.setAttribute('onclick', 'return false'); // Blockiert den Link
-        }
-    }
-
-    // Event-Listener hinzufügen, der die Funktion bei Änderung der Checkbox auslöst
-    tosCheckbox.addEventListener('change', toggleDownloadButton);
-
-    // Initialer Aufruf, um den Button beim Laden der Seite korrekt zu setzen
-    toggleDownloadButton();
-</script>
-
-
-
-
-
-
-
-</section>
-
-
-<section id="product-info">
-
-
-
-    <div class="container">
-        <div class="row align-items-center">
-
-
-            <div class="row align-items-center">
-                <div class="col-md-6 left" data-aos="fade-right" data-aos-duration="1000">
-
-                    <div class="product-description">
-
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 left" data-aos="fade-right" data-aos-duration="1000">
-
-
-                </div>
-                <br>
-                <div class="buy ">
-                    <div class="d-flex align-items-center">
-                        <div>
-
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-
-<section id="faq">
-    <style type="text/css">
-        .brand h1 {
-            font-size: 36px;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background: linear-gradient(to right, #6f00ed, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
+            padding: 0;
+            background-image: url('assets/images/background2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white; /* Textfarbe auf Weiß gesetzt für bessere Lesbarkeit */
         }
-
-        .nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .nav a {
-            color: #666;
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund für Header */
+            color: white;
             text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            margin-right: 35px;
-            transition: color 0.5s;
+            padding: 20px 0;
         }
-
-        .nav-link.wide {
-            color: white;
+        header h1 {
+            margin: 0;
         }
-
-        .white-link {
-            color: white;
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund für den Container */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
-        .nav a.selected {
-            color: white;
+        .tos-section {
+            margin-bottom: 20px;
         }
-
-        .nav a:hover {
-            color: rgb(255, 255, 255);
+        .tos-section h2 {
+            color: #6f00ed; /* Lila Farbe für die Abschnittsüberschriften */
         }
-
-        .header {
-            border-radius: 20px 20px 0px 0px;
-            padding: 5px 0px 10px 30px;
-            color: #fff;
-            width: 100%;
-            height: 55px;
-            display: flex;
-            align-content: center;
-            justify-content: space-between;
+        .tos-section p, .tos-section ul {
+            line-height: 1.6;
         }
-
-        .underheader {
-            border-radius: 20px 20px 0px 0px;
-            padding: 10px 0px;
-            color: rgb(197, 197, 197);
-            width: 100%;
-            font-size: 10px;
-            display: flex;
-            align-content: center;
-            justify-content: center;
+        .tos-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
-
-        .faq-item {
-            margin-bottom: 40px;
-            margin-top: 40px;
-            padding-left: 15px;
-            border-left: 2px solid #6f00ed;
-            transition: 2s;
-        }
-
-        .faq-item1 {
-            margin-bottom: 40px;
-            margin-top: 40px;
-            padding-left: 15px;
-            border-left: 2px solid #6f00ed;
-            transition: 2s;
-        }
-
-        .faq-item2 {
-            margin-bottom: 40px;
-            margin-top: 40px;
-            padding-left: 15px;
-            border-left: 2px solid #6f00ed;
-            transition: 2s;
-        }
-
-        .faq-item3 {
-            margin-bottom: 40px;
-            margin-top: 40px;
-            padding-left: 15px;
-            border-left: 2px solid #6f00ed;
-            transition: 2s;
-        }
-
-        .faq-item4 {
-            margin-bottom: 40px;
-            margin-top: 40px;
-            padding-left: 15px;
-            border-left: 2px solid #6f00ed;
-            transition: 2s;
-        }
-
-        .faq-line {
-            border-left: 5px solid #6f00ed;
-            box-shadow: 1px 1px 15px #6f00ed;
-            border-radius: 5px;
-            padding: .6rem 1.5rem;
-            margin-bottom: 1.7rem;
-        }
-
-        .faq-body {
-            padding-left: 15px;
-            display: none;
-            color: white;
-            width: 95%;
-            margin-top: 30px;
-        }
-
-        .faq-body1 {
-            padding-left: 15px;
-            display: none;
-            color: white;
-            width: 95%;
-            margin-top: 30px;
-        }
-
-        .faq-body2 {
-            padding-left: 15px;
-            display: none;
-            color: white;
-            width: 95%;
-            margin-top: 30px;
-        }
-
-        .faq-body3 {
-            padding-left: 15px;
-            display: none;
-            color: white;
-            width: 95%;
-            margin-top: 30px;
-        }
-
-        .faq-body4 {
-            padding-left: 15px;
-            display: none;
-            color: white;
-            width: 95%;
-            margin-top: 30px;
-        }
-
-        .faq-wrapper {
-            width: 75%;
-            margin: 0 auto;
-        }
-
-        .header p {
-            width: 100%;
-            margin: 0 auto;
+        footer {
             text-align: center;
-        }
-
-        .header h1 {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .faq-inner {
-            padding: 30px;
-            transition: 2s;
-        }
-
-        .faq-plus {
-            cursor: pointer;
-            float: right;
-            font-size: 1.4em;
-            line-height: 1em;
-            cursor: pointer;
-        }
-
-        hr {
-            background-color: #6f00ed;
-            box-shadow: 1px 1px 15px #6f00ed;
-        }
-
-        .faq-item h3 {
+            padding: 20px;
+            background-color: #222;
             color: white;
-            transition: 2s;
-        }
-
-        .faq-item h3:hover {
-            color: #6f00ed;
-            transition: 2s;
-            cursor: pointer;
-        }
-
-        .faq-item1 h3 {
-            color: white;
-            transition: 2s;
-        }
-
-        .faq-item1 h3:hover {
-            color: #6f00ed;
-            transition: 2s;
-            cursor: pointer;
-        }
-
-        .faq-item2 h3 {
-            color: white;
-            transition: 2s;
-        }
-
-        .faq-item2 h3:hover {
-            color: #6f00ed;
-            transition: 2s;
-            cursor: pointer;
-        }
-
-        .faq-item3 h3 {
-            color: white;
-            transition: 2s;
-        }
-
-        .faq-item3 h3:hover {
-            color: #6f00ed;
-            transition: 2s;
-            cursor: pointer;
-        }
-
-        .faq-item4 h3 {
-            color: white;
-            transition: 2s;
-        }
-
-        .faq-item4 h3:hover {
-            color: #6f00ed;
-            transition: 2s;
-            cursor: pointer;
         }
     </style>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="header">
-                    <h1>FAQs</h1>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        Scanner Won't Work?
-                        <span class="faq-plus">&plus;</span>
-                    </h3>
-                    <div class="faq-body">
-                        Please join our Discord server and create a ticket to resolve the issue.
-                    </div>
-                </div>
-                <hr>
-                <div class="faq-item1">
-
-                </div>
-
-                <div class="faq-item2">
-
-
-
-                    <h3>
-                        How To Stay Updated?
-                        <span class="faq-plus">&plus;</span>
-                    </h3>
-                    <div class="faq-body2">
-                        We will consistently update the website, but please ensure to join our Discord server as well to stay informed at all times.
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-        </div>
-        </div>
-        </div>
-        <script type="text/javascript">
-            $(".faq-item").on('click', function() {
-                $(this).parent().parent().find('.faq-body').slideToggle();
-            });
-            $(".faq-item1").on('click', function() {
-                $(this).parent().parent().find('.faq-body1').slideToggle();
-            });
-            $(".faq-item2").on('click', function() {
-                $(this).parent().parent().find('.faq-body2').slideToggle();
-            });
-            $(".faq-item3").on('click', function() {
-                $(this).parent().parent().find('.faq-body3').slideToggle();
-            });
-            $(".faq-item4").on('click', function() {
-                $(this).parent().parent().find('.faq-body4').slideToggle();
-            });
-        </script>
-</section>
-
-<section id="services" class="section">
+</head>
+<body>
+    <header>
+        <h1>Terms of Service</h1>
+        <p>Last Updated: February 6, 2025</p>
+    </header>
 
     <div class="container">
-        <div class="row justify-content-center justify-content-md-start">
+        <section class="tos-section">
+            <h2>1. Introduction</h2>
+            <p>By using Gamma Scanner (the "Software"), a cheat scanner for FiveM, you ("the User") agree to the following Terms of Service ("Terms"). Please read them carefully before installing or using the Software. If you do not agree to these Terms, you must not use the Software.</p>
+        </section>
 
-            <div class="col-lg-4 col-md-6 col-xs-12 col-sm-10">
-                <div class="services-item1 text-center">
-                    <h4>Community</h4>
-                    <p>Lifetime Users
-                    </p>
-                    <h4>Unknown</h4>
-                </div>
-            </div>
+        <section class="tos-section">
+            <h2>2. Data Collection and Privacy</h2>
+            <p>Gamma Scanner is designed to scan for and detect cheats in FiveM, which involves the collection of certain information from your computer and the FiveM client to ensure that the software functions properly. By using this Software, you agree to the collection and processing of the following data:</p>
+            <ul>
+                <li><strong>Technical Information:</strong> System specifications, hardware configurations, software versions, and operating system data.</li>
+                <li><strong>Game Data:</strong> Data related to your FiveM client for cheat detection, including logs and memory scans.</li>
+                <li><strong>Usage Data:</strong> Frequency and features used within the Software.</li>
+                <li><strong>User-Generated Data:</strong> Any user files or custom configurations processed by the Software for cheat detection purposes.</li>
+                <li><strong>Error and Crash Reports:</strong> Information about errors or crashes to improve the Software.</li>
+            </ul>
+        </section>
 
+        <section class="tos-section">
+            <h2>3. User Consent</h2>
+            <p>By using Gamma Scanner, you consent to the collection and processing of the data mentioned in Section 2. If you do not wish to have your data collected, you should discontinue using the Software immediately.</p>
+        </section>
 
+        <section class="tos-section">
+            <h2>4. Data Security</h2>
+            <p>We implement industry-standard encryption and security measures to protect the collected data from unauthorized access. However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+        </section>
 
+        <section class="tos-section">
+            <h2>5. Software Updates and Maintenance</h2>
+            <p>The Software may automatically update to the latest version to improve functionality and security, or to adapt to changes in FiveM. By using Gamma Scanner, you agree to receive these automatic updates.</p>
+        </section>
 
-            <div class="col-lg-4 col-md-6 col-xs-12 col-sm-10">
-                <div class="services-item1 text-center">
-                    <h4>Staff Members</h4>
-                    <p> uqm
-                    </p>
-                    <h4>1</h4>
+        <section class="tos-section">
+            <h2>6. Limitations of Liability</h2>
+            <p>The Software is provided "as-is" without warranties of any kind, express or implied. We do not guarantee that Gamma Scanner will detect all cheats or malicious software. We are not liable for any damages arising from the use of the Software, including any impact on your game or account.</p>
+        </section>
 
-                </div>
-            </div>
+        <section class="tos-section">
+            <h2>7. Prohibited Activities</h2>
+            <p>As a user of Gamma Scanner, you agree to:</p>
+            <ul>
+                <li>Not modify, reverse engineer, or attempt to bypass the security of the Software.</li>
+                <li>Not use the Software in a way that causes harm to the FiveM community or disrupts the game experience.</li>
+                <li>Not distribute or share cheats or hacks with others.</li>
+            </ul>
+        </section>
 
-            <div class="col-lg-4 col-md-6 col-xs-12 col-sm-10">
-                <div class="services-item1 text-center">
-                    <h4>Customers</h4>
-                    <p>Verified Buyers
-                    </p>
-                    <h4>Unknown</h4>
-                </div>
-            </div>
+        <section class="tos-section">
+            <h2>8. Termination of Service</h2>
+            <p>We reserve the right to suspend or terminate your access to Gamma Scanner at any time, with or without cause, without prior notice. If you violate these Terms, we may disable your use of the Software and require you to delete it from your system.</p>
+        </section>
 
+        <section class="tos-section">
+            <h2>9. Third-Party Services</h2>
+            <p>Gamma Scanner may link to third-party websites or services not under our control. We are not responsible for the privacy practices or content of these services. Please review their privacy policies before using them.</p>
+        </section>
 
-        </div>
+        <section class="tos-section">
+            <h2>10. Modifications to Terms</h2>
+            <p>We may update these Terms at any time. Significant changes will be posted on this page. By continuing to use Gamma Scanner after such changes, you agree to the updated Terms.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>11. Governing Law</h2>
+            <p>These Terms will be governed by the laws of [Your Jurisdiction], without regard to its conflict of law provisions. Any legal disputes arising from these Terms will be resolved in the competent courts of [Your Jurisdiction].</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>12. Contact Information</h2>
+            <p>If you have any questions regarding these Terms or the Software, please contact us at:</p>
+            <p>Email: <a href="mailto:support@example.com" style="color: #6f00ed;">support@example.com</a></p>
+            <p>Website: <a href="http://www.example.com" target="_blank" style="color: #6f00ed;">www.example.com</a></p>
+        </section>
     </div>
 
-
-</section>
-
+    <footer>
+        <p>&copy; 2025 Gamma Scanner. All rights reserved.</p>
+    </footer>
 </body>
+</html>
