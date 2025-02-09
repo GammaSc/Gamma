@@ -94,38 +94,43 @@
 
 
 
-<section id="landing">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="2200">
-                <div class="left">
-                    <div class="box-welcome">
-                        <span>Gamma Scanner</span>
-                    </div>
-                    <div class="content">
-                        <h1 class="mb-3">Welcome to Project Gamma<span class="red">!</span></h1>
-                        <div class="paragraph">
-                            <p class="mb-5"></p>
-                            <p class="mb-5"> - A Tool designed to track Cheaters.</p>
+    <section id="landing">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2200">
+                    <div class="left">
+                        <div class="box-welcome">
+                            <span>Gamma Scanner</span>
                         </div>
-                        <!-- Checkbox und Button in einer Zeile -->
-                        <div class="checkbox-container">
-                            <a id="download-btn" class="button" href="#" onclick="return false" disabled>Download</a>
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="tos-checkbox">
-                                <span class="checkmark"></span>
-                                I agree to the ToS
-                            </label>
+                        <div class="content">
+                            <h1 class="mb-3">Welcome to Project Gamma<span class="red">!</span></h1>
+                            <div class="paragraph">
+                                <p class="mb-5"></p>
+                                <p class="mb-5"> - A Tool designed to track Cheaters.</p>
+                            </div>
+                            <!-- Checkbox und Button in einer Zeile -->
+                            <div class="checkbox-container">
+                                <a id="download-btn" class="button" href="#" onclick="return false" disabled>Download</a>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="tos-checkbox">
+                                    <span class="checkmark"></span>
+                                    I agree to the ToS
+                                </label>
+                            </div>
+
+                            <!-- Textbox mit lila Linie -->
+                            <div class="textbox-container">
+                                <input type="text" class="textbox" placeholder="Optional text">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
-                <img class="tilted" style="top: 30px; box-shadow: 0px 0px 50px #6f00ed; border-radius: 50px;" src="assets/images/paid2.png" alt="Tilted Image">
+                <div class="col-md-6 d-flex justify-content-end right" data-aos="fade-left" data-aos-duration="2200">
+                    <img class="tilted" style="top: 30px; box-shadow: 0px 0px 50px #6f00ed; border-radius: 50px;" src="assets/images/paid2.png" alt="Tilted Image">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <style>
     .checkbox-container {
@@ -633,54 +638,3 @@
 
 
 </section>
-
-
-
-
-
-<script src="assets/js/bootstrap.js"></script>
-<script>
-    AOS.init({
-        disable: 'mobile',
-        once: true,
-    });
-
-    function change_buy_button(month, threemonths, oneyear, lifetime, sellixid) {
-        var value = document.getElementById('plan-select-permspoof').value;
-        if (value == 0) {
-            document.getElementById('plan-tag').innerHTML = "3.99€";
-            document.getElementById("linkperm").setAttribute("sellix", "63e2c02b14707");
-
-        } else if (value == 1) {
-            document.getElementById('plan-tag').innerHTML = "6.99€";
-            document.getElementById("linkperm").setAttribute("sellix", "63e2c202df00a");
-        } else if (value == 2) {
-            document.getElementById('plan-tag').innerHTML = "10.99€";
-            document.getElementById("linkperm").setAttribute("sellix", "63e2c2599778d");
-        } else if (value == 3) {
-            document.getElementById('plan-tag').innerHTML = "20.99";
-            document.getElementById("linkperm").setAttribute("sellix", "63e2c2cab6d09");
-        }
-    }
-
-    function change_buy_button2(month, threemonths, oneyear, lifetime) {
-        var value = document.getElementById('plan-2').value;
-        if (value == 0) {
-
-            document.getElementById('plan-2-tag').innerHTML = "5.99€";
-            document.getElementById("linkperm3").setAttribute("sellix", "63e2e7d04923a");
-
-        } else if (value == 1) {
-            document.getElementById('plan-2-tag').innerHTML = "15.99€";
-            document.getElementById("linkperm3").setAttribute("sellix", "63e2e8383018a");
-        } else if (value == 2) {
-            document.getElementById('plan-2-tag').innerHTML = "19.99€";
-            document.getElementById("linkperm3").setAttribute("sellix", "63e2e87bd94dc");
-        } else if (value == 3) {
-            document.getElementById('plan-2-tag').innerHTML = "29.99€";
-            document.getElementById("linkperm3").setAttribute("sellix", "63e2e8bf50a34");
-        }
-    }
-</script>
-
-</body>
